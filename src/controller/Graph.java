@@ -32,21 +32,17 @@ public class Graph {
 
 public void printGraph() {
     List<Node> sortedNodes = new ArrayList<>(nodes);
-    sortedNodes.sort((n1, n2) -> Integer.compare(n1.getValue(), n2.getValue())); 
+    sortedNodes.sort((n1, n2) -> Integer.compare(n1.getValue(), n2.getValue()));
 
     for (Node node : sortedNodes) {
         System.out.print("Vertex " + node.getValue() + ":");
-        Set<Node> vecinos = node.getNeighbors();
+        List<Node> sortedNeighbors = new ArrayList<>(node.getNeighbors());
+        sortedNeighbors.sort((n1, n2) -> Integer.compare(n1.getValue(), n2.getValue()));
 
-        if (vecinos != null && !vecinos.isEmpty()) {
-            List<Node> sortedVecinos = new ArrayList<>(vecinos);
-            sortedVecinos.sort((n1, n2) -> Integer.compare(n1.getValue(), n2.getValue()));
-
-            for (Node vecino : sortedVecinos) {
-                System.out.print(" -> " + vecino.getValue());
-            }
+        for (Node neighbor : sortedNeighbors) {
+            System.out.print(" -> " + neighbor.getValue());
         }
-        System.out.println();
+        System.out.println(); // Salto de línea al final de cada vértice
     }
 }
 
