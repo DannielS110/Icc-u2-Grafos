@@ -1,4 +1,4 @@
 
-Ejecucion version 1
+Ejecucion version 1.1.0
 
-<img width="1643" height="588" alt="image" src="https://github.com/user-attachments/assets/f468ab66-ed64-487e-94e6-31fb12ff1f2c" />
+<img width="1645" height="515" alt="image" src="https://github.com/user-attachments/assets/e757dbc0-3595-4085-ba6b-bc0f8c6d6cef" />
