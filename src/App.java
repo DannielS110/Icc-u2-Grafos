@@ -11,33 +11,36 @@ public class App {
         System.out.println("Creando grafo...\n");
         System.out.println("|");
         System.out.println("|");
-        Graph graph = new Graph();
+      
+        Graph grafo = new Graph();
 
-        Node node0 = graph.addNode(0);
-        Node node1 = graph.addNode(1);
-        Node node2 = graph.addNode(2);
-        Node node3 = graph.addNode(3);
-        Node node4 = graph.addNode(4);
-        Node node5 = graph.addNode(5);
-        Node node7 = graph.addNode(7);
-        Node node8 = graph.addNode(8);
-        Node node9 = graph.addNode(9);
+        Node node0=grafo.addNode(0);
+        Node node5=grafo.addNode(5);
+        Node node3=grafo.addNode(3);
+        Node node2=grafo.addNode(2);
+        Node node4=grafo.addNode(4);
+        Node node7=grafo.addNode(7);
+        Node node9=grafo.addNode(9);
+        Node node1=grafo.addNode(1);
+        Node node8=grafo.addNode(8);
 
-        graph.addEdge(node0, node1);
-        graph.addEdge(node0, node3);
-        graph.addEdge(node0, node5);
+        grafo.addEdge(node0, node1);
+        grafo.addEdge(node0, node3);
+        grafo.addEdge(node0, node5);
 
-        graph.addEdge(node1, node2);
-        graph.addEdge(node1, node4);
-        graph.addEdge(node1, node8);
-        graph.addEdge(node9, node1);
+        grafo.addEdge(node1, node0);
+        grafo.addEdge(node1, node2);
+        grafo.addEdge(node1, node4);
+        grafo.addEdge(node1, node8);
 
-        graph.addEdge(node2, node3);
-        graph.addEdge(node3, node4);
-        graph.addEdge(node3, node7);
+        grafo.addEdge(node2, node3);
 
-        graph.addEdge(node7, node8);
+        grafo.addEdge(node3, node4);
+        grafo.addEdge(node3, node7);
+        grafo.addEdge(node3, node9);
 
-        graph.printGraph();
+        grafo.addEdge(node7, node8);
+
+        grafo.printGraph();
     }
 }
